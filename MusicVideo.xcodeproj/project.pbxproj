@@ -15,6 +15,8 @@
 		F96D23C51C68EBCC0016D863 /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D23C41C68EBCC0016D863 /* MusicVideoTests.swift */; };
 		F96D23D01C68EBCC0016D863 /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D23CF1C68EBCC0016D863 /* MusicVideoUITests.swift */; };
 		F96D23E21C68F23C0016D863 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D23E11C68F23C0016D863 /* APIManager.swift */; };
+		F96D23E51C6912C60016D863 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D23E41C6912C60016D863 /* Constants.swift */; };
+		F96D23E71C6916460016D863 /* MusicVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D23E61C6916460016D863 /* MusicVideos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F96D23CF1C68EBCC0016D863 /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		F96D23D11C68EBCC0016D863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96D23E11C68F23C0016D863 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F96D23E41C6912C60016D863 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F96D23E61C6916460016D863 /* MusicVideos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		F96D23AE1C68EBCC0016D863 /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				F96D23E31C6912950016D863 /* Utils */,
 				F96D23E01C68EE3E0016D863 /* Suporting Files */,
 				F96D23DD1C68EDEB0016D863 /* Model */,
 				F96D23DE1C68EE140016D863 /* Controller */,
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F96D23E11C68F23C0016D863 /* APIManager.swift */,
+				F96D23E61C6916460016D863 /* MusicVideos.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				F96D23B61C68EBCC0016D863 /* Assets.xcassets */,
 			);
 			name = "Suporting Files";
+			sourceTree = "<group>";
+		};
+		F96D23E31C6912950016D863 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F96D23E41C6912C60016D863 /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96D23E71C6916460016D863 /* MusicVideos.swift in Sources */,
 				F96D23E21C68F23C0016D863 /* APIManager.swift in Sources */,
 				F96D23B21C68EBCC0016D863 /* ViewController.swift in Sources */,
 				F96D23B01C68EBCC0016D863 /* AppDelegate.swift in Sources */,
+				F96D23E51C6912C60016D863 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

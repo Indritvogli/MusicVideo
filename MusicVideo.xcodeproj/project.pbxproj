@@ -139,6 +139,7 @@
 		F96D23CE1C68EBCC0016D863 /* MusicVideoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				F96D23B81C68EBCC0016D863 /* LaunchScreen.storyboard */,
 				F96D23CF1C68EBCC0016D863 /* MusicVideoUITests.swift */,
 				F96D23D11C68EBCC0016D863 /* Info.plist */,
 			);
@@ -165,7 +166,6 @@
 		F96D23DF1C68EE2C0016D863 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F96D23B81C68EBCC0016D863 /* LaunchScreen.storyboard */,
 				F96D23B31C68EBCC0016D863 /* Main.storyboard */,
 			);
 			name = View;
@@ -375,6 +375,7 @@
 				F96D23B91C68EBCC0016D863 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../MusicVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

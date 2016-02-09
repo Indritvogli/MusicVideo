@@ -9,5 +9,8 @@
 import Foundation
 
 typealias JSONDictionary = [String: AnyObject]
-
 typealias JSONArray = Array<AnyObject>
+
+let WIFi = "WIFI Available"
+let NOACCES = " No Internet Access"
+let WWAN   =  "Celular Access Available"

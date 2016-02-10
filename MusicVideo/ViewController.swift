@@ -16,11 +16,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        reachabilityStatusChanged()
+        
         //Call API
         let api = APIManager()
         api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json", complition:didLoadData)
         
-        reachabilityStatusChanged()
+        
         
         
         

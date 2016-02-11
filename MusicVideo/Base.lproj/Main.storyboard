@@ -23,17 +23,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="37S-RA-t3W">
-                                            <rect key="frame" x="8" y="8" width="126" height="108"/>
+                                            <rect key="frame" x="8" y="0.0" width="126" height="124"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="126" id="k5A-Xs-vna"/>
+                                                <constraint firstAttribute="width" constant="126" id="UWm-ca-fwI"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVQ-GB-jjN">
-                                            <rect key="frame" x="142" y="8" width="32" height="20"/>
+                                            <rect key="frame" x="142" y="0.0" width="29" height="28"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="fur-Ec-IOQ"/>
+                                                <constraint firstAttribute="height" constant="28" id="PqB-rH-0yz"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -46,15 +46,15 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="cVQ-GB-jjN" firstAttribute="leading" secondItem="bnF-jb-GIt" secondAttribute="leading" id="DsG-Km-KJL"/>
-                                        <constraint firstItem="37S-RA-t3W" firstAttribute="bottom" secondItem="bnF-jb-GIt" secondAttribute="bottom" id="I3j-fg-eKr"/>
-                                        <constraint firstItem="37S-RA-t3W" firstAttribute="bottom" secondItem="Hz8-Qb-3z6" secondAttribute="bottomMargin" id="TnC-78-zgp"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="bnF-jb-GIt" secondAttribute="trailing" constant="64" id="ZQz-xH-6R2"/>
-                                        <constraint firstItem="cVQ-GB-jjN" firstAttribute="leading" secondItem="37S-RA-t3W" secondAttribute="trailing" constant="8" symbolic="YES" id="ZSv-jW-BGt"/>
-                                        <constraint firstItem="bnF-jb-GIt" firstAttribute="top" secondItem="cVQ-GB-jjN" secondAttribute="bottom" constant="2" id="bTf-Bx-UpV"/>
-                                        <constraint firstItem="37S-RA-t3W" firstAttribute="top" secondItem="Hz8-Qb-3z6" secondAttribute="topMargin" id="jPN-Ft-BnO"/>
-                                        <constraint firstItem="37S-RA-t3W" firstAttribute="leading" secondItem="Hz8-Qb-3z6" secondAttribute="leadingMargin" id="vRq-xg-CeB"/>
-                                        <constraint firstItem="37S-RA-t3W" firstAttribute="top" secondItem="cVQ-GB-jjN" secondAttribute="top" id="zmY-C3-k7y"/>
+                                        <constraint firstItem="cVQ-GB-jjN" firstAttribute="leading" secondItem="37S-RA-t3W" secondAttribute="trailing" constant="8" symbolic="YES" id="0XF-pD-x1R"/>
+                                        <constraint firstItem="bnF-jb-GIt" firstAttribute="bottom" secondItem="Hz8-Qb-3z6" secondAttribute="bottomMargin" id="8wa-s4-szB"/>
+                                        <constraint firstItem="bnF-jb-GIt" firstAttribute="top" secondItem="cVQ-GB-jjN" secondAttribute="bottom" constant="2" id="FCr-MN-hYS"/>
+                                        <constraint firstItem="37S-RA-t3W" firstAttribute="top" secondItem="cVQ-GB-jjN" secondAttribute="top" id="QBP-Cc-R9A"/>
+                                        <constraint firstItem="bnF-jb-GIt" firstAttribute="leading" secondItem="cVQ-GB-jjN" secondAttribute="leading" id="awF-ON-6xj"/>
+                                        <constraint firstAttribute="bottom" secondItem="37S-RA-t3W" secondAttribute="bottom" id="btr-zO-1I5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bnF-jb-GIt" secondAttribute="trailing" constant="64" id="gXi-3N-zKm"/>
+                                        <constraint firstItem="37S-RA-t3W" firstAttribute="top" secondItem="Hz8-Qb-3z6" secondAttribute="top" id="lJd-CD-1TH"/>
+                                        <constraint firstItem="37S-RA-t3W" firstAttribute="leading" secondItem="Hz8-Qb-3z6" secondAttribute="leadingMargin" id="zVj-pO-6Zn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

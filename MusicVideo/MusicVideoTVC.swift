@@ -102,6 +102,7 @@ class MusicVideoTVC: UITableViewController {
 
     private struct stoyboard {
         static let cellReuseIndentifier = "cell"
+        static let segueIndentifier = "musicDetail"
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(stoyboard.cellReuseIndentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
@@ -110,7 +111,21 @@ class MusicVideoTVC: UITableViewController {
         
         return cell
     }
-    
 
+
+    // Mark: - Navigation
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == stoyboard.segueIndentifier
+        {
+            if let indexpath = tableView.indexPathForSelectedRow {
+                let video = videos[indexpath.row]
+                let dvc = segue.destinationViewController as! MusicVideoDetailVC
+                dvc.videos = video 
+                
+            }
+        }
+    }
+
 }
+

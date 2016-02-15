@@ -11,6 +11,8 @@ import UIKit
 class MusicVideoDetailVC: UIViewController {
     
     var videos:Videos!
+    
+    
 
     @IBOutlet weak var vName: UILabel!
     

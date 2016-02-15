@@ -22,7 +22,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVQ-GB-jjN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVQ-GB-jjN">
                                             <rect key="frame" x="174" y="15" width="32" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="PqB-rH-0yz"/>
@@ -31,7 +31,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MusicTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnF-jb-GIt">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MusicTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnF-jb-GIt">
                                             <rect key="frame" x="174" y="43" width="418" height="73"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,13 +178,6 @@
                                 <exclude reference="Mob-7c-8Iu"/>
                                 <exclude reference="UrW-jd-Y2d"/>
                                 <exclude reference="zoh-Ve-3Mx"/>
-                                <exclude reference="bUB-dJ-350"/>
-                                <exclude reference="eNA-BT-ak1"/>
-                                <exclude reference="mEh-ps-o5Q"/>
-                                <exclude reference="doo-RR-70T"/>
-                                <exclude reference="nzu-sT-XUS"/>
-                                <exclude reference="GxL-pj-mLm"/>
-                                <exclude reference="b6E-0s-Km3"/>
                                 <include reference="HeA-t9-zKd"/>
                                 <exclude reference="OlE-9l-iKY"/>
                                 <include reference="VQh-R8-WPb"/>
@@ -194,6 +187,13 @@
                                 <include reference="h35-qm-1mE"/>
                                 <exclude reference="qFe-MG-8oX"/>
                                 <exclude reference="w8B-kL-gdU"/>
+                                <exclude reference="bUB-dJ-350"/>
+                                <exclude reference="eNA-BT-ak1"/>
+                                <exclude reference="mEh-ps-o5Q"/>
+                                <exclude reference="doo-RR-70T"/>
+                                <exclude reference="nzu-sT-XUS"/>
+                                <exclude reference="GxL-pj-mLm"/>
+                                <exclude reference="b6E-0s-Km3"/>
                             </mask>
                         </variation>
                     </view>
@@ -242,7 +242,7 @@
                                                         <constraint firstAttribute="width" constant="121" id="7hB-9m-2fx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -266,7 +266,7 @@
                                                         <constraint firstAttribute="width" constant="105" id="yck-Wp-WSG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -286,6 +286,9 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzX-AV-aOd">
                                                     <rect key="frame" x="535" y="26" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="touchIDSec:" destination="2M0-iJ-Too" eventType="valueChanged" id="hOI-Mh-22I"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1a-qO-k7m">
                                                     <rect key="frame" x="8" y="31" width="101" height="21"/>
@@ -293,7 +296,7 @@
                                                         <constraint firstAttribute="width" constant="101" id="eb5-Sk-0Y3"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -319,7 +322,7 @@
                                                         <constraint firstAttribute="width" constant="255" id="JXC-Ds-9l2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-Kn-9eX">
@@ -345,7 +348,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-gE-qe6">
                                                     <rect key="frame" x="8" y="8" width="584" height="75"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

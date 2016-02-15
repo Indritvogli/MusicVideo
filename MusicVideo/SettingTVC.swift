@@ -32,10 +32,29 @@ class SettingTVC: UITableViewController {
         super.viewDidLoad()
          NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
-    tableView.alwaysBounceVertical = false
+         tableView.alwaysBounceVertical = false
+        title = "Settings"
+        touchID.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
         
         
     }
+    
+    
+    @IBAction func touchIDSec(sender: UISwitch) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if touchID.on {
+            defaults.setBool(touchID.on , forKey: "SecSetting")
+            
+            
+        } else {
+            defaults.setBool(false, forKey: "SecSetting")
+        }
+        
+    }
+    
+    
+    
+    
     func preferredFontChange() {
         aboutDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         feedBackDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)

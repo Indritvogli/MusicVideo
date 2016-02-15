@@ -20,9 +20,14 @@ class MusicVideoTVC: UITableViewController {
         super.viewDidLoad()
      
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         reachabilityStatusChanged()
         
         }
+    func preferredFontChange() {
+        print("Prefered font Changed")
+    }
     
     func didLoadData(videos:[Videos]){
         print(reachabilityStatus)
@@ -79,7 +84,9 @@ class MusicVideoTVC: UITableViewController {
     
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "reachabilityStatusChanged", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+
     }
 
     // MARK: - Table view data source
@@ -95,6 +102,7 @@ class MusicVideoTVC: UITableViewController {
 
     private struct stoyboard {
         static let cellReuseIndentifier = "cell"
+        static let segueIndentifier = "musicDetail"
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(stoyboard.cellReuseIndentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
@@ -103,7 +111,21 @@ class MusicVideoTVC: UITableViewController {
         
         return cell
     }
-    
 
+
+    // Mark: - Navigation
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == stoyboard.segueIndentifier
+        {
+            if let indexpath = tableView.indexPathForSelectedRow {
+                let video = videos[indexpath.row]
+                let dvc = segue.destinationViewController as! MusicVideoDetailVC
+                dvc.videos = video 
+                
+            }
+        }
+    }
+
 }
+

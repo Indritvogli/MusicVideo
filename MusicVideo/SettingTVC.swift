@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingTVC: UITableViewController {
+class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate{
     
     
     @IBOutlet weak var aboutDisplay: UILabel!
@@ -77,6 +78,56 @@ class SettingTVC: UITableViewController {
         }
         
     }
+   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    if indexPath.section == 0 && indexPath.row == 1 {
+        let mailComposerViewController = configureMail()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposerViewController, animated: true, completion: nil)
+            
+        } else {
+            //No Mail
+            mailAlert()
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+       }
+    }
+    
+    func configureMail() -> MFMailComposeViewController {
+        
+        let mailComposeVC = MFMailComposeViewController()
+        mailComposeVC.mailComposeDelegate = self
+        mailComposeVC.setToRecipients(["Ivogli00@gmail.com"])
+        mailComposeVC.setSubject("Music Video App FeedBack")
+        mailComposeVC.setMessageBody("Hi IndRit,\n\nI Would Like to Share the following feddback....\n", isHTML: false)
+        return mailComposeVC
+    
+    }
+    
+    func mailAlert() {
+        let alertController: UIAlertController = UIAlertController(title: "Alert", message: "No e-Mail Account setup for Phone", preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in
+          
+        }
+            
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        switch result.rawValue{
+        case MFMailComposeResultCancelled.rawValue:
+            print("Mail Canceled")
+        case MFMailComposeResultSaved.rawValue:
+            print("Mail Saved")
+        case MFMailComposeResultSent.rawValue:
+            print("Mail Sent")
+        case MFMailComposeResultFailed.rawValue:
+            print("Mail Failed")
+        default:
+            print("Unknown Issue")
+        }
+        self.dismissViewControllerAnimated(true, completion: nil )
+    }
     
     
     
@@ -90,6 +141,13 @@ class SettingTVC: UITableViewController {
         numberOfMusicLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         dragSliderBelowLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     

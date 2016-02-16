@@ -79,6 +79,12 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="fln-Va-6CH"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="9Jo-By-b0g">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="gvv-BH-EZC" eventType="valueChanged" id="rjg-Yn-N9F"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0G-Si-Ck7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,17 +398,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-gE-qe6">
-                                                    <rect key="frame" x="8" y="8" width="584" height="75"/>
+                                                    <rect key="frame" x="560" y="26" width="16" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Music Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9Z-3d-0GI">
+                                                    <rect key="frame" x="8" y="31" width="159" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eTp-gE-qe6" firstAttribute="top" secondItem="9Za-gA-OgX" secondAttribute="topMargin" id="5H4-Gj-sxP"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eTp-gE-qe6" secondAttribute="bottom" constant="-7" id="eTL-nC-pT5"/>
-                                                <constraint firstItem="eTp-gE-qe6" firstAttribute="leading" secondItem="9Za-gA-OgX" secondAttribute="leadingMargin" id="nG7-9v-TwV"/>
-                                                <constraint firstItem="eTp-gE-qe6" firstAttribute="trailing" secondItem="9Za-gA-OgX" secondAttribute="trailingMargin" id="uJR-id-huf"/>
+                                                <constraint firstItem="w9Z-3d-0GI" firstAttribute="top" secondItem="9Za-gA-OgX" secondAttribute="topMargin" constant="23" id="7P0-ZI-NQS"/>
+                                                <constraint firstItem="w9Z-3d-0GI" firstAttribute="leading" secondItem="9Za-gA-OgX" secondAttribute="leadingMargin" id="Kcx-nn-4L1"/>
+                                                <constraint firstItem="eTp-gE-qe6" firstAttribute="top" secondItem="9Za-gA-OgX" secondAttribute="topMargin" constant="18" id="oGv-oh-Ec5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eTp-gE-qe6" secondAttribute="trailing" constant="16" id="uGt-Zf-aGa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -414,16 +426,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="byc-tQ-z9Q">
-                                                    <rect key="frame" x="46" y="27" width="509" height="31"/>
+                                                    <rect key="frame" x="44" y="37" width="513" height="31"/>
                                                     <connections>
                                                         <action selector="valueChangedSlider:" destination="2M0-iJ-Too" eventType="valueChanged" id="yhn-Od-dpe"/>
                                                     </connections>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the slider below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-uF-eSZ">
+                                                    <rect key="frame" x="169" y="8" width="263" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="BMC-eO-sRa"/>
+                                                        <constraint firstAttribute="width" constant="263" id="NUg-OW-qw5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="byc-tQ-z9Q" firstAttribute="centerX" secondItem="Oux-om-sUE" secondAttribute="centerX" id="YWb-tO-tme"/>
-                                                <constraint firstItem="byc-tQ-z9Q" firstAttribute="centerY" secondItem="Oux-om-sUE" secondAttribute="centerY" id="lbW-UO-ora"/>
-                                                <constraint firstItem="byc-tQ-z9Q" firstAttribute="leading" secondItem="Oux-om-sUE" secondAttribute="leadingMargin" constant="40" id="sep-Xh-jCs"/>
+                                                <constraint firstItem="byc-tQ-z9Q" firstAttribute="top" secondItem="Zfk-uF-eSZ" secondAttribute="bottom" constant="8" symbolic="YES" id="2pC-JY-qF0"/>
+                                                <constraint firstItem="byc-tQ-z9Q" firstAttribute="centerX" secondItem="Zfk-uF-eSZ" secondAttribute="centerX" id="JOb-bo-djo"/>
+                                                <constraint firstItem="Zfk-uF-eSZ" firstAttribute="centerX" secondItem="Oux-om-sUE" secondAttribute="centerX" id="SMJ-cZ-b0Y"/>
+                                                <constraint firstItem="Zfk-uF-eSZ" firstAttribute="top" secondItem="Oux-om-sUE" secondAttribute="topMargin" id="Zgo-vt-BNc"/>
+                                                <constraint firstItem="byc-tQ-z9Q" firstAttribute="leading" secondItem="Oux-om-sUE" secondAttribute="leadingMargin" constant="38" id="qbI-Rh-PwY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -439,7 +463,9 @@
                         <outlet property="APICnt" destination="eTp-gE-qe6" id="g3M-aE-wBn"/>
                         <outlet property="aboutDisplay" destination="sPA-Hw-aTy" id="7J9-70-l7Q"/>
                         <outlet property="bestImageDisplay" destination="ImK-d3-163" id="4qd-rZ-ylO"/>
+                        <outlet property="dragSliderBelowLabel" destination="Zfk-uF-eSZ" id="Uem-bG-qni"/>
                         <outlet property="feedBackDisplay" destination="Ztj-KZ-puh" id="AXS-Nc-p7B"/>
+                        <outlet property="numberOfMusicLabel" destination="w9Z-3d-0GI" id="b3i-9n-vRC"/>
                         <outlet property="securityDisplay" destination="h1a-qO-k7m" id="EK8-hP-pNY"/>
                         <outlet property="sliderCnt" destination="byc-tQ-z9Q" id="FAy-2O-70w"/>
                         <outlet property="touchID" destination="bzX-AV-aOd" id="aXT-Cu-QRZ"/>

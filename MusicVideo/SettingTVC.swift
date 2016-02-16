@@ -28,12 +28,19 @@ class SettingTVC: UITableViewController {
     
     @IBOutlet weak var sliderCnt: UISlider!
     
+    @IBOutlet weak var numberOfMusicLabel: UILabel!
+    
+    @IBOutlet weak var dragSliderBelowLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
          tableView.alwaysBounceVertical = false
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.redColor()]
         title = "Settings"
+       
         touchID.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil)
@@ -41,6 +48,9 @@ class SettingTVC: UITableViewController {
             let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
             APICnt.text = "\(theValue)"
             sliderCnt.value = Float(theValue)
+        } else {
+            sliderCnt.value = 10.0
+            APICnt.text = ("\(Int(sliderCnt.value))")
         }
         
         
@@ -77,6 +87,8 @@ class SettingTVC: UITableViewController {
         securityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         bestImageDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         APICnt.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        numberOfMusicLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        dragSliderBelowLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
     }
     
     

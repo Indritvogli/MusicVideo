@@ -269,6 +269,7 @@
 				TargetAttributes = {
 					F96D23AB1C68EBCB0016D863 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = NT6N8CUSE8;
 					};
 					F96D23BF1C68EBCC0016D863 = {
 						CreatedOnToolsVersion = 7.2;

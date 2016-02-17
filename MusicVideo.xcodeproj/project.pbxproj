@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C843ADC51C73C54200CA932B /* MyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C843ADC41C73C54200CA932B /* MyExtension.swift */; };
 		C8D010551C69A0CD0030998B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D010541C69A0CD0030998B /* Reachability.m */; };
 		F900F36F1C6BACFE00840320 /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900F36E1C6BACFE00840320 /* MusicVideoTVC.swift */; };
 		F96D23B01C68EBCC0016D863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D23AF1C68EBCC0016D863 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C843ADC41C73C54200CA932B /* MyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExtension.swift; sourceTree = "<group>"; };
 		C8D010521C69A0CC0030998B /* MusicVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicVideo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8D010531C69A0CD0030998B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C8D010541C69A0CD0030998B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				F96D23B11C68EBCC0016D863 /* ViewController.swift */,
 				F900F36E1C6BACFE00840320 /* MusicVideoTVC.swift */,
+				C843ADC41C73C54200CA932B /* MyExtension.swift */,
 				F9C2CAD21C6BD63D00439A5C /* MusicVideoTableViewCell.swift */,
 				F9C2CAD41C6CFB0500439A5C /* MusicVideoDetailVC.swift */,
 				F9C2CAD61C6D2AB800439A5C /* SettingTVC.swift */,
@@ -343,6 +346,7 @@
 				C8D010551C69A0CD0030998B /* Reachability.m in Sources */,
 				F96D23E51C6912C60016D863 /* Constants.swift in Sources */,
 				F900F36F1C6BACFE00840320 /* MusicVideoTVC.swift in Sources */,
+				C843ADC51C73C54200CA932B /* MyExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate{
     
     @IBOutlet weak var touchID: UISwitch!
    
+    @IBOutlet weak var bestQualityImage: UISwitch!
     
     @IBOutlet weak var bestImageDisplay: UILabel!
     
@@ -38,11 +39,13 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate{
         super.viewDidLoad()
          NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
+        
          tableView.alwaysBounceVertical = false
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.redColor()]
         title = "Settings"
        
-        touchID.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
+        touchID.on          = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
+        bestQualityImage.on = NSUserDefaults.standardUserDefaults().boolForKey("BestImage")
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil)
         {
@@ -78,6 +81,22 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate{
         }
         
     }
+    
+    @IBAction func bestQualityAction(sender: UISwitch) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if bestQualityImage.on {
+            defaults.setBool(touchID.on , forKey: "BestImage")
+            
+            
+        } else {
+            defaults.setBool(false, forKey: "BestImage")
+        }
+        
+
+    }
+    
+    
+    
    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     if indexPath.section == 0 && indexPath.row == 1 {
         let mailComposerViewController = configureMail()
@@ -144,16 +163,10 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate{
     
     
     
-    
-    
-    
-    
-    
-    
-    
     deinit
     {
       NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+  
         
     }
 

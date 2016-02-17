@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
+import UIKit
 class Videos
 {
+    var vQuality:String =  "100x100"
     
     var vRank = 0
     //Data Encapsulations
@@ -74,7 +75,7 @@ class Videos
         if let img = data["im:image"] as? JSONArray,
         image = img[2] as? JSONDictionary,
             immage = image["label"] as? String{
-                self._vImageUrl = immage.stringByReplacingOccurrencesOfString("100x100", withString: "600x600")
+                self._vImageUrl = immage.stringByReplacingOccurrencesOfString("100x100", withString: vQuality)
         }
         else
         {

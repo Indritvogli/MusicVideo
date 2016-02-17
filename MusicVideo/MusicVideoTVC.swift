@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController , UISearchResultsUpdating {
-    
+class MusicVideoTVC: UITableViewController  {
+  
     var videos = [Videos]()
     var filtredSearch = [Videos]()
     let resultSearchController = UISearchController(searchResultsController: nil)
@@ -48,7 +48,7 @@ class MusicVideoTVC: UITableViewController , UISearchResultsUpdating {
         resultSearchController.searchResultsUpdater = self
         definesPresentationContext = true
         resultSearchController.dimsBackgroundDuringPresentation = false
-        resultSearchController.searchBar.placeholder = "Search for Artist"
+        resultSearchController.searchBar.placeholder = "Search for Artist , Name , Rank"
         resultSearchController.searchBar.searchBarStyle = UISearchBarStyle.Prominent
         // add the search bar to your tableview
         tableView.tableHeaderView = resultSearchController.searchBar
@@ -78,6 +78,7 @@ class MusicVideoTVC: UITableViewController , UISearchResultsUpdating {
             alert.addAction(deletwAction)
         self.presentViewController(alert, animated: true , completion: nil)
             }
+            
         default:
            // view.backgroundColor = UIColor.greenColor()
             if videos.count > 0 {
@@ -95,7 +96,9 @@ class MusicVideoTVC: UITableViewController , UISearchResultsUpdating {
         if resultSearchController.active {
             refreshControl?.attributedTitle = NSAttributedString(string: "No Refresh Allowed")
         } else {
-        runAPI()
+           
+            runAPI()
+          
         }
         
     }
@@ -117,7 +120,6 @@ class MusicVideoTVC: UITableViewController , UISearchResultsUpdating {
         let refreshDate = formatter.stringFromDate(NSDate())
         refreshControl?.attributedTitle = NSAttributedString(string: "\(refreshDate)")
     }
-    
     
     
     
@@ -186,16 +188,23 @@ class MusicVideoTVC: UITableViewController , UISearchResultsUpdating {
             }
         }
     }
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        searchController.searchBar.text!.lowercaseString
-        filterSearch(searchController.searchBar.text!)
-    }
+//    func updateSearchResultsForSearchController(searchController: UISearchController) {
+//        searchController.searchBar.text!.lowercaseString
+//        filterSearch(searchController.searchBar.text!)
+//    }
     func filterSearch(searchText:String) {
         filtredSearch = videos.filter {
-            videos in return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+            videos in return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString) || videos.vName.lowercaseString.containsString(searchText.lowercaseString) || "\(videos.vRank)".lowercaseString.containsString(searchText.lowercaseString)
         }
         tableView.reloadData()
     }
 
 }
+//extension MusicVideoTVC:UISearchResultsUpdating{
+//    func updateSearchResultsForSearchController(searchController: UISearchController) {
+//        searchController.searchBar.text!.lowercaseString
+//        filterSearch(searchController.searchBar.text!)
+//    }
+//
+//}
 

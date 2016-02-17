@@ -382,6 +382,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-Kn-9eX">
                                                     <rect key="frame" x="535" y="31" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="bestQualityAction:" destination="2M0-iJ-Too" eventType="valueChanged" id="ycH-2X-Ri5"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -466,6 +469,7 @@
                         <outlet property="APICnt" destination="eTp-gE-qe6" id="g3M-aE-wBn"/>
                         <outlet property="aboutDisplay" destination="sPA-Hw-aTy" id="7J9-70-l7Q"/>
                         <outlet property="bestImageDisplay" destination="ImK-d3-163" id="4qd-rZ-ylO"/>
+                        <outlet property="bestQualityImage" destination="yY7-Kn-9eX" id="BTx-pn-fmI"/>
                         <outlet property="dragSliderBelowLabel" destination="Zfk-uF-eSZ" id="Uem-bG-qni"/>
                         <outlet property="feedBackDisplay" destination="Ztj-KZ-puh" id="AXS-Nc-p7B"/>
                         <outlet property="numberOfMusicLabel" destination="w9Z-3d-0GI" id="b3i-9n-vRC"/>
